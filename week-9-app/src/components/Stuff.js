@@ -9,7 +9,7 @@ const Stuff = () => (
         <Header text="Howdy" />
         <Paragraph message="Doodah" />
         <Square colour="orange" />
-        <People />
+        <People names={["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]} />
     </React.Fragment>
 )
 

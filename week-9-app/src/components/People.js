@@ -1,12 +1,10 @@
 import React from "react";
 
-let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
-
-const People = () => (
+const People = ({names}) => (
     <ul>
-        {names.map(name => (
+        {names ? names.map(name => (
             <li>{name}</li>
-        ))}
+        )) : "Nothing to see here"}
     </ul>
 )
 
