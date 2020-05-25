@@ -4,13 +4,17 @@ import Paragraph from "./Paragraph";
 import Square from "./Square";
 import People from "./People";
 
-const Stuff = () => (
+const Stuff = ({square}) => (
     <React.Fragment>
         <Header text="Howdy" />
         <Paragraph message="Doodah" />
-        <Square colour="orange" />
+        {square ? <Square colour="orange"/> : null}
         <People names={["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]} />
     </React.Fragment>
 )
+
+Stuff.defaultProps = {
+    square: true
+}
 
 export default Stuff;
