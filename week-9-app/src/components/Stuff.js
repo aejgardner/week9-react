@@ -6,7 +6,7 @@ import People from "./People";
 
 const Stuff = ({square}) => (
     <React.Fragment>
-        <Header text="Howdy" />
+        <Header>Cat</Header>
         <Paragraph message="Doodah" />
         {square ? <Square colour="orange"/> : null}
         <People names={["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]} />
