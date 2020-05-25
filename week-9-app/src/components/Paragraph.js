@@ -1,7 +1,7 @@
 import React from "react";
 
-const Paragraph = ({message}) => (
-    <p>{message ? message : "Hello, world"}</p>
+const Paragraph = ({children}) => (
+    <p>{children ? children : "Hello, world"}</p>
 )
 
 export default Paragraph;
