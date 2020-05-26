@@ -13,27 +13,24 @@ class Counter extends Component {
     }
 
     increment() {
-        let newCounter = this.state.counter;
+        const { max } = this.props;
+        const { counter } = this.state;
 
-        if (this.state.counter < this.props.max) {
-            this.setState({ counter: newCounter + 1 })
-         } else return
+        this.setState({ counter: counter + (counter < max ? 1 : 0) })
     }
 
     decrement() {
-        let newCounter = this.state.counter;
+        const { counter } = this.state;
 
-        if (this.state.counter > 0) {
-        this.setState({ counter: newCounter - 1 })
-        } else return
+        this.setState({ counter: counter - (counter > 0 ? 1 : 0) })
     }
 
     render() {
         return (
             <>
-                <button onClick={() => { this.increment() }}>+</button>
+                <button onClick={ this.increment }>+</button>
                 <p>{this.state.counter}</p>
-                <button onClick={() => { this.decrement() }}>-</button>
+                <button onClick={ this.decrement }>-</button>
             </>
         )
     }
