@@ -14,16 +14,16 @@ const Stuff = ({square}) => {
         { name: "The Great Milk Shortage by Simon Schama", price: 12.99 },
     ];
 
+    let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
+
     return (
-        <React.Fragment>
+        <>
             <Header>Cat</Header>
             <Paragraph>I am a cat</Paragraph>
-            
             <Basket items={ items } />
-
             {square ? <Square colour="orange"/> : null}
-            <People names={["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]} />
-        </React.Fragment>
+            <People names={ names } />
+        </>
     )
 }
 

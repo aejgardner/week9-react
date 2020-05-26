@@ -10,8 +10,8 @@ const Basket = ({items}) => (
             </tr>
         </thead>
         <tbody>
-            {items.map(item => (
-                <BasketItem name={ item.name } price={ item.price } />
+            {items.map((item, index) => (
+                <BasketItem key={ index } name={ item.name } price={ item.price } />
             ))}
         </tbody>
     </table>

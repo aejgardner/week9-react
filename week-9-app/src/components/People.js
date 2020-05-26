@@ -2,8 +2,8 @@ import React from "react";
 
 const People = ({names}) => (
     <ul>
-        {names ? names.map(name => (
-            <li>{name}</li>
+        {names.length ? names.map((name, index) => (
+            <li key={index}>{name}</li>
         )) : "Nothing to see here"}
     </ul>
 )
