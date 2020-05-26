@@ -7,10 +7,19 @@ import Counter from "./classcomponents/Counter";
 import StepCounter from "./classcomponents/StepCounter";
 import CatchMeIfYouCan from "./classcomponents/CatchMeIfYouCan";
 import RollCall from './classcomponents/RollCall';
+import Colours from './classcomponents/Colours';
 
 function App() {
 
   let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
+
+  let colours = [
+    "#C14412",
+    "#EBB31A",
+    "#8F5318",
+    "#009EAD",
+    "#395967"
+  ];
 
   return (
     <div className="App">
@@ -20,6 +29,8 @@ function App() {
         <Counter initial={50} max={100} />
         <StepCounter max={100} step={5} />
         <RollCall names={names} />
+        <Die sides={6} />
+        <Colours colours={colours} />
         <Stuff />
         <Clicked />
       </header>
