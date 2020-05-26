@@ -21,7 +21,7 @@ const Stuff = ({square}) => {
             <Header>Cat</Header>
             <Paragraph>I am a cat</Paragraph>
             <Basket items={ items } />
-            {square ? <Square colour="orange"/> : null}
+            {square ? <Square colour="hotpink"/> : null}
             <People names={ names } />
         </>
     )

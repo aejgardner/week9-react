@@ -1,11 +1,27 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Square = ({colour}) => {
-    return <div style={{height: 200, width: 200, backgroundColor: colour}}></div>;
-}
+class Square extends Component {
+    constructor(props) {
+        super(props);
 
-Square.defaultProps = {
-    color: "blue"
-}
+
+        this.state = {
+            colour: "green",
+            clicked: false
+        }
+
+        this.changeColour = this.changeColour.bind(this);
+    }
+
+    changeColour() {
+        this.setState({clicked: !this.state.clicked})
+    }
+
+    render() {
+        return (
+            <div onClick={ () => { this.changeColour() } } style={{ height: 200, width: 200, backgroundColor: this.state.clicked ? this.state.colour : this.props.colour }}></div>
+        )
+    }
+} 
 
 export default Square;

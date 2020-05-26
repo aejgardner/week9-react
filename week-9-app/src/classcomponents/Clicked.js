@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Clicked extends Component {
     constructor(props) {
-            super(props);
+        super(props);
         
         this.state = {
             clicked: false
@@ -12,7 +12,6 @@ class Clicked extends Component {
     }
 
     handleClick() {
-
         this.setState({ clicked: !this.state.clicked });
     }
 
