@@ -8,6 +8,7 @@ import StepCounter from "./classcomponents/StepCounter";
 import CatchMeIfYouCan from "./classcomponents/CatchMeIfYouCan";
 import RollCall from './classcomponents/RollCall';
 import Colours from './classcomponents/Colours';
+import Die from './classcomponents/Die';
 
 function App() {
 

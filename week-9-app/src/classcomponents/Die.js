@@ -5,30 +5,23 @@ class Die extends Component {
         super(props);
 
         this.state = {
-            index: 0
+            currentNumber: 1
         }
 
-        this.nextName = this.nextName.bind(this);
+        this.rollDie = this.rollDie.bind(this);
     }
 
-    nextName() {
-        const { names } = this.props;
-        const { index } = this.state;
+    rollDie() {
+        const { sides } = this.props;
 
-        this.setState({
-            index: (index + 1) % names.length
-        });
+        this.setState({ currentNumber: Math.ceil(Math.random() * sides) });
     }
 
     render() {
-        const { index } = this.state;
-        const { names } = this.props;
+        const { currentNumber } = this.state
 
         return (
-            <>
-                <p style={{ backgroundColor: "navy" }}>{names[index]}</p>
-                <button onClick={this.nextName}>Next</button>
-            </>
+            <p onClick={this.rollDie} style={{ backgroundColor: "darkred", padding: 20 }}>{currentNumber}</p>
         )
     }
 }
