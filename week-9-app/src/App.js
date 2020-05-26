@@ -5,14 +5,16 @@ import Clicked from "./classcomponents/Clicked";
 import ToggleText from "./classcomponents/ToggleText";
 import Counter from "./classcomponents/Counter";
 import StepCounter from "./classcomponents/StepCounter";
+import CatchMeIfYouCan from "./classcomponents/CatchMeIfYouCan";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <ToggleText initial="Hello" alternate="World" />
-        <Counter initial={ 50 } max={ 100 } />
-        <StepCounter max={ 100 } step={ 5 } />
+        <CatchMeIfYouCan jump={100} />
+        <Counter initial={50} max={100} />
+        <StepCounter max={100} step={5} />
         <Stuff />
         <Clicked />
       </header>
