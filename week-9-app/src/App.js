@@ -3,6 +3,7 @@ import './App.css';
 import Stuff from "./components/Stuff";
 import Length from "./formcomponents/Length";
 import PasswordStrength from "./formcomponents/PasswordStrength";
+import TempConverter from "./formcomponents/TempConverter";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <header className="App-header">
         <Length />
         <PasswordStrength />
+        <TempConverter />
         <Stuff />
       </header>
     </div>
