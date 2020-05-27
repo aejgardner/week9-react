@@ -5,7 +5,7 @@ class CatchMeIfYouCan extends Component {
         super(props);
 
         this.state = {
-            distanceFromTop: 0
+            distanceFromTop: 200
         }
 
         this.jump = this.jump.bind(this);

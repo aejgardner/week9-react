@@ -19,7 +19,6 @@ class StepCounter extends Component {
         let newCounter = counter + step;
 
         this.setState({ counter: newCounter > max ? max : newCounter });
-
     }
 
     decrement() {

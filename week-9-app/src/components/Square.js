@@ -13,14 +13,14 @@ class Square extends Component {
     }
 
     changeColour() {
-        this.setState({clicked: !this.state.clicked})
+        this.setState({ clicked: !this.state.clicked })
     }
 
     render() {
         return (
-            <div onClick={ () => { this.changeColour() } } style={{ height: 200, width: 200, backgroundColor: this.state.clicked ? this.state.colour : this.props.colour }}></div>
+            <div onClick={() => { this.changeColour() }} style={{ height: 200, width: 200, backgroundColor: this.state.clicked ? this.state.colour : this.props.colour }}></div>
         )
     }
-} 
+}
 
 export default Square;

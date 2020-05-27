@@ -1,11 +1,13 @@
 import React from "react";
 
-const People = ({names}) => (
-    <ul onClick={() => {console.log("Hello, world")}}>
-        {names.length ? names.map((name, index) => (
-            <li key={index}>{name}</li>
-        )) : "Nothing to see here"}
-    </ul>
+const People = ({ names }) => (
+    names.length ?
+        <ul onClick={() => { console.log("Hello, world") }}>
+            {names.map((name, index) => (
+                <li key={index}>{name}</li>
+            ))}
+        </ul>
+        : <p>Nothing to see here</p>
 )
 
 export default People;

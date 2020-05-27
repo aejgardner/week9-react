@@ -24,7 +24,7 @@ class Colours extends Component {
         const { colours } = this.props;
         const { index } = this.state;
         return (
-            <div onClick={() => { this.nextColour() }} style={{ height: 200, width: 200, backgroundColor: colours[index] }}></div>
+            <div onClick={this.nextColour} style={{ height: 200, width: 200, backgroundColor: colours[index] }}></div>
         )
     }
 }
