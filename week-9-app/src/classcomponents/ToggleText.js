@@ -12,7 +12,7 @@ class ToggleText extends Component {
     }
 
     toggleText() {
-        this.setState({clicked: !this.state.clicked})
+        this.setState({ clicked: !this.state.clicked })
     }
 
     render() {
@@ -20,10 +20,10 @@ class ToggleText extends Component {
         return (
             <>
                 <p>{this.state.clicked ? initial : alternate}</p>
-                <button onClick={() => { this.toggleText() }}>Toggle</button>
+                <button onClick={() => { this.toggleText() }}>Toggle word</button>
             </>
         )
     }
-} 
+}
 
 export default ToggleText;

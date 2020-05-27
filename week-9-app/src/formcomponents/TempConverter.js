@@ -37,9 +37,9 @@ class TempConverter extends Component {
 
         return (
             <>
-                <input value={celsius} type="number" onChange={this.handleChangeCelsius} className="form-control container" placeholder="Type celsius" />
+                <input value={celsius} type="number" onChange={this.handleChangeCelsius} className="form-control container mb-3" placeholder="Type celsius" />
 
-                <input value={celsius === "" ? "" : this.celsiusToFarenheiht(celsius)} type="number" onChange={this.handleChangeFahrenheit} className="form-control container" placeholder="Type fahrenheiht" />
+                <input value={celsius === "" ? "" : this.celsiusToFarenheiht(celsius)} type="number" onChange={this.handleChangeFahrenheit} className="form-control container mb-3" placeholder="Type fahrenheiht" />
             </>
         )
     }

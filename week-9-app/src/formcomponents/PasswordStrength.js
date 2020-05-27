@@ -30,7 +30,7 @@ class PasswordStrength extends Component {
         }
 
         return (
-            <input value={input} type="password" style={{ backgroundColor: colour }} onChange={this.handleChange} className="form-control container" />
+            <input value={input} type="password" style={{ backgroundColor: colour }} onChange={this.handleChange} placeholder="password strength tester" className="form-control container mb-3" />
         )
     }
 }

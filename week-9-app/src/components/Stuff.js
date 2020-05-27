@@ -13,6 +13,7 @@ import RollCall from '../classcomponents/RollCall';
 import Colours from '../classcomponents/Colours';
 import Die from '../classcomponents/Die';
 import LameGame from '../classcomponents/LameGame';
+import Transform from "../formcomponents/Transform";
 
 const Stuff = ({ square }) => {
 
@@ -32,6 +33,10 @@ const Stuff = ({ square }) => {
         "#009EAD",
         "#395967"
     ];
+
+    let numberSquarer = (num) => {
+        return num * num
+    }
 
     return (
         <>
@@ -75,6 +80,9 @@ const Stuff = ({ square }) => {
             <People
                 names={names}
             />
+            <Transform
+                transform={numberSquarer}
+            />{/* tranform prop contains a function that can then be called later */}
         </>
     )
 }

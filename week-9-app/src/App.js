@@ -5,6 +5,7 @@ import Length from "./formcomponents/Length";
 import PasswordStrength from "./formcomponents/PasswordStrength";
 import TempConverter from "./formcomponents/TempConverter";
 import List from "./formcomponents/List";
+import Adder from "./formcomponents/Adder";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
         <TempConverter />
         <Stuff />
         <List />
+        <Adder />
       </header>
-    </div>
+    </div >
   );
 }
 

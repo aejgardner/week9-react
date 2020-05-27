@@ -27,7 +27,7 @@ class RollCall extends Component {
         return (
             <>
                 <p style={{ padding: 20, backgroundColor: "navy" }}>{names[index]}</p>
-                <button onClick={this.nextName}>Next</button>
+                <button onClick={this.nextName}>Next person</button>
             </>
         )
     }

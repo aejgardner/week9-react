@@ -25,7 +25,7 @@ class Length extends Component {
         const { input } = this.state;
 
         return (
-            <input value={input} onChange={this.handleChange} placeholder="check length in console" className="form-control container" />
+            <input value={input} onChange={this.handleChange} placeholder="check length in console" className="form-control container mb-3 mt-3" />
         )
     }
 }
