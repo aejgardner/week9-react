@@ -21,19 +21,19 @@ const Stuff = ({ square }) => {
         { name: "The Great Milk Shortage by Simon Schama", price: 12.99 },
     ];
 
-    let colours = [
-        "#C14412",
-        "#EBB31A",
-        "#8F5318",
-        "#009EAD",
-        "#395967"
-    ];
-
     let numberSquarer = (num) => {
         return num * num
     }
 
     let fields = ["First Name", "Last Name", "Email"];
+
+    let colours = [
+        "#C14412",
+        "#EBB31A",
+        "#8F5318",
+        "#009EAD",
+        "#395967",
+    ];
 
     return (
         <>
@@ -58,9 +58,6 @@ const Stuff = ({ square }) => {
             <Die
                 sides={6}
             />
-            {/* <LameGame
-                aim={5}
-            /> */}
             <Clicked />
             <Colours
                 colours={colours}

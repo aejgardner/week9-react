@@ -5,19 +5,24 @@ class Square extends Component {
         super(props);
 
         this.state = {
-            clicked: false
+            index: 0
         }
 
-        this.changeColour = this.changeColour.bind(this);
+        this.nextColour = this.nextColour.bind(this);
     }
 
-    changeColour() {
-        this.setState({ clicked: !this.state.clicked })
+    nextColour() {
+        const { colours } = this.props
+        const { index } = this.state
+
+        this.setState({ index: (index + 1) % colours.length })
     }
 
     render() {
+        const { colours } = this.props;
+        const { index } = this.state;
         return (
-            <div onClick={() => { this.changeColour() }} style={{ height: 200, width: 200, backgroundColor: this.props.colour }}></div>
+            <div onClick={this.nextColour} style={{ height: 200, width: 200, backgroundColor: colours[index] }}></div>
         )
     }
 }

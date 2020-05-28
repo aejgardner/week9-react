@@ -27,14 +27,14 @@ class TempConverter extends Component {
             <form className="form mb-4" >
                 <input
                     type="number"
-                    className="form-control"
+                    className="form-control mt-4 mb-4"
                     value={centigrade}
                     onChange={(e) => this.centConverter(e)}
                     placeholder="Centigrade"
                 />
                 <input
                     type="number"
-                    className="form-control"
+                    className="form-control mt-4 mb-4"
                     value={farenheit}
                     onChange={(e) => this.farConverter(e)}
                     placeholder="Farenheit"

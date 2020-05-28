@@ -25,6 +25,14 @@ function App() {
 
   let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
 
+  let colours = [
+    "#C14412",
+    "#EBB31A",
+    "#8F5318",
+    "#009EAD",
+    "#395967",
+  ];
+
   return (
     <div className="App">
       <Router>
@@ -45,7 +53,7 @@ function App() {
           </Route>
           <Route exact path="/squares" component={Square} />
           <Route exact path="/squares/:colour" render={({ match }) => (
-            <Square colour={match.params.colour} />
+            <Square colours={[match.params.colour, ...colours]} />
           )} />
           <Route exact path="/steps/:max/:step" render={({ match }) => (
             <StepCounter max={match.params.max} step={match.params.step} />
