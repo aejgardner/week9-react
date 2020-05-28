@@ -2,7 +2,7 @@ import React from "react";
 // import Link from ReactRouter
 import { Link } from "react-router-dom";
 const Footer = () => (
-    <ul className="d-flex">
+    <ul className="d-flex mt-4">
         <li className="list-group-item">
             { /* use Link instead of <a> */}
             <Link to="/">Home</Link>

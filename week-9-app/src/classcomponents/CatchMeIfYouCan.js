@@ -21,7 +21,7 @@ class CatchMeIfYouCan extends Component {
     render() {
         const { distanceFromTop } = this.state;
         return (
-            <button style={{ position: "absolute", top: distanceFromTop }} onClick={this.jump}>Jump</button>
+            <button style={{ position: "absolute", top: distanceFromTop, display: "none" }} onClick={this.jump}>Jump</button>
         )
     }
 }

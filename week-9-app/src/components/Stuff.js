@@ -1,12 +1,10 @@
 import React from "react";
 import Header from "./Header";
 import Paragraph from "./Paragraph";
-
 import Basket from "./Basket";
 import Clicked from "../classcomponents/Clicked";
 import ToggleText from "../classcomponents/ToggleText";
 import Counter from "../classcomponents/Counter";
-import StepCounter from "../classcomponents/StepCounter";
 import CatchMeIfYouCan from "../classcomponents/CatchMeIfYouCan";
 import Colours from '../classcomponents/Colours';
 import Die from '../classcomponents/Die';
@@ -56,9 +54,6 @@ const Stuff = ({ square }) => {
             />
             <Counter
                 initial={50} max={100}
-            />
-            <StepCounter
-                max={100} step={5}
             />
             <Die
                 sides={6}

@@ -12,8 +12,7 @@ import Footer from "./routingcomponents/Footer";
 import FourOhFour from "./routingcomponents/FourOhFour";
 import Square from "./components/Square";
 import StepCounter from "./classcomponents/StepCounter";
-
-
+import ProgressBar from "./prebuiltcomponents/Progress";
 
 // import the ReactRouter components
 import {
@@ -27,7 +26,7 @@ function App() {
   let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
 
   return (
-    <div className="App container">
+    <div className="App">
       <Router>
         <Switch>
           <Route exact path="/" component={Stuff} />
@@ -55,6 +54,7 @@ function App() {
           <Route exact path="/adder" component={Adder} />
           <FourOhFour />
         </Switch>
+        <ProgressBar />
         <Footer />
       </Router>
     </div >
