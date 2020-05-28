@@ -8,9 +8,8 @@ import Counter from "../classcomponents/Counter";
 import CatchMeIfYouCan from "../classcomponents/CatchMeIfYouCan";
 import Colours from '../classcomponents/Colours';
 import Die from '../classcomponents/Die';
-// import LameGame from '../classcomponents/LameGame';
-import Transform from "../formcomponents/Transform";
 import Form from "../formcomponents/Form";
+import TransformParent from "../formcomponents/TransformParent";
 
 const Stuff = ({ square }) => {
 
@@ -20,10 +19,6 @@ const Stuff = ({ square }) => {
         { name: "Milk", price: 250.65 },
         { name: "The Great Milk Shortage by Simon Schama", price: 12.99 },
     ];
-
-    let numberSquarer = (num) => {
-        return num * num
-    }
 
     let fields = ["First Name", "Last Name", "Email"];
 
@@ -65,9 +60,7 @@ const Stuff = ({ square }) => {
             <Basket
                 items={items}
             />
-            <Transform
-                transform={numberSquarer}
-            />{/* tranform prop contains a function that can then be called later */}
+            <TransformParent />{/* tranform prop contains a function that can then be called later */}
         </>
     )
 }
