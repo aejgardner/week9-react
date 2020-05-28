@@ -1,21 +1,18 @@
 import React from "react";
 import Header from "./Header";
 import Paragraph from "./Paragraph";
-import Square from "./Square";
-import People from "./People";
+
 import Basket from "./Basket";
 import Clicked from "../classcomponents/Clicked";
 import ToggleText from "../classcomponents/ToggleText";
 import Counter from "../classcomponents/Counter";
 import StepCounter from "../classcomponents/StepCounter";
 import CatchMeIfYouCan from "../classcomponents/CatchMeIfYouCan";
-import RollCall from '../classcomponents/RollCall';
 import Colours from '../classcomponents/Colours';
 import Die from '../classcomponents/Die';
 // import LameGame from '../classcomponents/LameGame';
 import Transform from "../formcomponents/Transform";
 import Form from "../formcomponents/Form";
-import KieransFields from "../formcomponents/KieransFields";
 
 const Stuff = ({ square }) => {
 
@@ -25,8 +22,6 @@ const Stuff = ({ square }) => {
         { name: "Milk", price: 250.65 },
         { name: "The Great Milk Shortage by Simon Schama", price: 12.99 },
     ];
-
-    let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
 
     let colours = [
         "#C14412",
@@ -53,9 +48,6 @@ const Stuff = ({ square }) => {
             <Form
                 fields={fields}
             />
-            <KieransFields
-                fieldArray={fields}
-            />
             <ToggleText
                 initial="Hello" alternate="World"
             />
@@ -67,9 +59,6 @@ const Stuff = ({ square }) => {
             />
             <StepCounter
                 max={100} step={5}
-            />
-            <RollCall
-                names={names}
             />
             <Die
                 sides={6}
@@ -83,12 +72,6 @@ const Stuff = ({ square }) => {
             />
             <Basket
                 items={items}
-            />
-            {square ? <Square
-                colour="hotpink"
-            /> : null}
-            <People
-                names={names}
             />
             <Transform
                 transform={numberSquarer}

@@ -16,7 +16,7 @@ class StepCounter extends Component {
         const { max, step } = this.props;
         const { counter } = this.state;
 
-        let newCounter = counter + step;
+        let newCounter = counter + +step;
 
         this.setState({ counter: newCounter > max ? max : newCounter });
     }
@@ -27,7 +27,7 @@ class StepCounter extends Component {
 
         let min = 0;
 
-        let newCounter = counter - step;
+        let newCounter = counter - +step;
 
         this.setState({ counter: newCounter < min ? min : newCounter });
     }

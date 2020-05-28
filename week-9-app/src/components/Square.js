@@ -5,7 +5,6 @@ class Square extends Component {
         super(props);
 
         this.state = {
-            colour: "green",
             clicked: false
         }
 
@@ -18,7 +17,7 @@ class Square extends Component {
 
     render() {
         return (
-            <div onClick={() => { this.changeColour() }} style={{ height: 200, width: 200, backgroundColor: this.state.clicked ? this.state.colour : this.props.colour }}></div>
+            <div onClick={() => { this.changeColour() }} style={{ height: 200, width: 200, backgroundColor: this.props.colour }}></div>
         )
     }
 }

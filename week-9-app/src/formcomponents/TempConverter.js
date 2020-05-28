@@ -1,50 +1,48 @@
 import React, { Component } from "react";
-
 class TempConverter extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
-            celsius: ""
+            farenheit: "",
+            centigrade: ""
         }
-
-        this.handleChangeCelsius = this.handleChangeCelsius.bind(this);
-        this.handleChangeFahrenheit = this.handleChangeFahrenheit.bind(this);
+        this.centConverter = this.centConverter.bind(this);
+        this.farConverter = this.farConverter.bind(this);
     }
 
-    handleChangeCelsius(e) {
-        let currentValue = e.currentTarget.value;
-
-        this.setState({ celsius: currentValue })
+    centConverter(e) {
+        // e.currentTarget: DOM element we attached the event handler to
+        // use the value property to read its current value
+        this.setState({ centigrade: e.currentTarget.value, farenheit: e.currentTarget.value * 1.8 + 32 })
     }
-
-    handleChangeFahrenheit(e) {
-        let currentValue = e.currentTarget.value;
-
-        this.setState({ celsius: currentValue === "" ? "" : this.fahrenheihtToCelsius(currentValue) })
+    farConverter(e) {
+        // e.currentTarget: DOM element we attached the event handler to
+        // use the value property to read its current value
+        this.setState({ farenheit: e.currentTarget.value, centigrade: e.currentTarget.value / 1.8 - 32 })
     }
-
-    fahrenheihtToCelsius(num) {
-        return (num - 32) * 5 / 9
-    }
-
-    celsiusToFarenheiht(num) {
-        return (num * 9 / 5) + 32
-    }
-
     render() {
-        const { celsius } = this.state;
+        let { centigrade, farenheit } = this.state;
 
         return (
-            <>
-                <input value={celsius} type="number" onChange={this.handleChangeCelsius} className="form-control container mb-3" placeholder="Type celsius" />
-
-                <input value={celsius === "" ? "" : this.celsiusToFarenheiht(celsius)} type="number" onChange={this.handleChangeFahrenheit} className="form-control container mb-3" placeholder="Type fahrenheiht" />
-            </>
-        )
+            <form className="form mb-4" >
+                <input
+                    type="number"
+                    className="form-control"
+                    value={centigrade}
+                    onChange={(e) => this.centConverter(e)}
+                    placeholder="Centigrade"
+                />
+                <input
+                    type="number"
+                    className="form-control"
+                    value={farenheit}
+                    onChange={(e) => this.farConverter(e)}
+                    placeholder="Farenheit"
+                />
+            </form>
+        );
     }
 }
-
 export default TempConverter;
 
 // Create a <TempConverter> component. It should have a °F and °C <input>. When you type a number into one <input> it should update the value in the other.
