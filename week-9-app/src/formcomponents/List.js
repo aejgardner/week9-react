@@ -35,6 +35,7 @@ class List extends Component {
                         <li key={index}>{item}</li>
                     ))}
                 </ul>
+
                 <input value={input} placeholder="add item" type="text" onChange={this.handleChange} className="form-control container" />
                 <button onClick={this.handleSubmit}>Add</button>
             </>

@@ -12,8 +12,10 @@ import CatchMeIfYouCan from "../classcomponents/CatchMeIfYouCan";
 import RollCall from '../classcomponents/RollCall';
 import Colours from '../classcomponents/Colours';
 import Die from '../classcomponents/Die';
-import LameGame from '../classcomponents/LameGame';
+// import LameGame from '../classcomponents/LameGame';
 import Transform from "../formcomponents/Transform";
+import Form from "../formcomponents/Form";
+import KieransFields from "../formcomponents/KieransFields";
 
 const Stuff = ({ square }) => {
 
@@ -38,6 +40,8 @@ const Stuff = ({ square }) => {
         return num * num
     }
 
+    let fields = ["First Name", "Last Name", "Email"];
+
     return (
         <>
             <Header>
@@ -46,6 +50,12 @@ const Stuff = ({ square }) => {
             <Paragraph>
                 I am a cat
             </Paragraph>
+            <Form
+                fields={fields}
+            />
+            <KieransFields
+                fieldArray={fields}
+            />
             <ToggleText
                 initial="Hello" alternate="World"
             />
@@ -64,9 +74,9 @@ const Stuff = ({ square }) => {
             <Die
                 sides={6}
             />
-            <LameGame
+            {/* <LameGame
                 aim={5}
-            />
+            /> */}
             <Clicked />
             <Colours
                 colours={colours}
