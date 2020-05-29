@@ -13,6 +13,7 @@ import FourOhFour from "./routingcomponents/FourOhFour";
 import Square from "./components/Square";
 import StepCounter from "./classcomponents/StepCounter";
 import ProgressBar from "./prebuiltcomponents/Progress";
+import CatchMeIfYouCan from "./prebuiltcomponents/CatchMeIfYouCan";
 
 // import the ReactRouter components
 import {
@@ -36,6 +37,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <CatchMeIfYouCan jump={100} />
         <Switch>
           <Route exact path="/" component={Stuff} />
           <Route exact path="/length" component={Length} />

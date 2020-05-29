@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, ProgressBar, Card } from 'react-bootstrap';
 
-class Progress extends Component {
+class CatchMeIfYouCan extends Component {
     constructor(props) {
         super(props);
 
@@ -40,9 +40,6 @@ class Progress extends Component {
             </Card>
         )
     }
-
-
-
 }
 
-export default Progress;
+export default CatchMeIfYouCan;
