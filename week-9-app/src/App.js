@@ -17,6 +17,7 @@ import CatchMeIfYouCan from "./prebuiltcomponents/CatchMeIfYouCan";
 import PrebuiltPasswordStrength from "./prebuiltcomponents/PasswordStrength";
 import PrebuiltList from "./prebuiltcomponents/List";
 import PrebuiltTempConverter from "./prebuiltcomponents/TempConverter";
+import Dates from "./prebuiltcomponents/Dates";
 
 // import the ReactRouter components
 import {
@@ -71,6 +72,7 @@ function App() {
         <ProgressBar />
         <PrebuiltList />
         <PrebuiltTempConverter />
+        <Dates />
         <Footer />
       </Router>
     </div >
