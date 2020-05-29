@@ -19,6 +19,7 @@ import PrebuiltList from "./prebuiltcomponents/List";
 import PrebuiltTempConverter from "./prebuiltcomponents/TempConverter";
 import Dates from "./prebuiltcomponents/Dates";
 import Carousel from "./prebuiltcomponents/Carousel";
+import Headline from "./prebuiltcomponents/Headline";
 
 // import the ReactRouter components
 import {
@@ -75,6 +76,7 @@ function App() {
         <PrebuiltTempConverter />
         <Dates />
         <Carousel />
+        <Headline message={"Hello"} />
         <Footer />
       </Router>
     </div >
