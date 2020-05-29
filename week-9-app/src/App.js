@@ -18,6 +18,7 @@ import PrebuiltPasswordStrength from "./prebuiltcomponents/PasswordStrength";
 import PrebuiltList from "./prebuiltcomponents/List";
 import PrebuiltTempConverter from "./prebuiltcomponents/TempConverter";
 import Dates from "./prebuiltcomponents/Dates";
+import Carousel from "./prebuiltcomponents/Carousel";
 
 // import the ReactRouter components
 import {
@@ -73,6 +74,7 @@ function App() {
         <PrebuiltList />
         <PrebuiltTempConverter />
         <Dates />
+        <Carousel />
         <Footer />
       </Router>
     </div >

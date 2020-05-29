@@ -50,5 +50,3 @@ class List extends Component {
 }
 
 export default List;
-
-// onChange={e => this.handleChange(e)} 
