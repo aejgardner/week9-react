@@ -40,6 +40,41 @@ function App() {
     "#395967",
   ];
 
+  let navLinks = [
+    {
+      name: "Home",
+      path: "/"
+    },
+    {
+      name: "Length",
+      path: "/length"
+    },
+    {
+      name: "Password Strength",
+      path: "/passwordstrength"
+    },
+    {
+      name: "Temperature Converter",
+      path: "/tempconverter"
+    },
+    {
+      name: "Roll Call",
+      path: "/rollcall"
+    },
+    {
+      name: "People",
+      path: "/people"
+    },
+    {
+      name: "List",
+      path: "/list"
+    },
+    {
+      name: "Adder",
+      path: "/adder"
+    },
+  ]
+
   return (
     <div className="App">
       <Router>
@@ -77,7 +112,7 @@ function App() {
         <Dates />
         <Carousel />
         <Headline message={"Hello"} />
-        <Footer />
+        <Footer navLinks={navLinks} />
       </Router>
     </div >
   );
