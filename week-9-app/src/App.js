@@ -15,6 +15,7 @@ import StepCounter from "./classcomponents/StepCounter";
 import ProgressBar from "./prebuiltcomponents/Progress";
 import CatchMeIfYouCan from "./prebuiltcomponents/CatchMeIfYouCan";
 import PrebuiltPasswordStrength from "./prebuiltcomponents/PasswordStrength";
+import PrebuiltList from "./prebuiltcomponents/List";
 
 // import the ReactRouter components
 import {
@@ -67,6 +68,7 @@ function App() {
           <FourOhFour />
         </Switch>
         <ProgressBar />
+        <PrebuiltList />
         <Footer />
       </Router>
     </div >
